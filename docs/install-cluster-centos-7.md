@@ -64,6 +64,8 @@ systemctl enable --now kubelet
 ## On kmaster
 ##### Initialize Kubernetes Cluster
 ```
+rm /etc/containerd/config.toml
+systemctl restart containerd
 kubeadm init --apiserver-advertise-address=172.16.16.100 --pod-network-cidr=192.168.0.0/16
 ```
 ##### Deploy Calico network
