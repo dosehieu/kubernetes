@@ -64,6 +64,7 @@ systemctl enable --now kubelet
 ## On kmaster
 ##### Initialize Kubernetes Cluster
 ```
+sudo yum -y install containerd
 rm /etc/containerd/config.toml
 systemctl restart containerd
 kubeadm init --apiserver-advertise-address=172.16.16.100 --pod-network-cidr=192.168.0.0/16
@@ -86,6 +87,9 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 ## On Kworker
 ##### Join the cluster
+sudo yum -y install containerd
+rm /etc/containerd/config.toml
+systemctl restart containerd
 Use the output from __kubeadm token create__ command in previous step from the master server and run here.
 
 ## Verifying the cluster
