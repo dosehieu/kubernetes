@@ -87,9 +87,11 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 ## On Kworker
 ##### Join the cluster
+```
 sudo yum -y install containerd
 rm /etc/containerd/config.toml
 systemctl restart containerd
+```
 Use the output from __kubeadm token create__ command in previous step from the master server and run here.
 
 ## Verifying the cluster
