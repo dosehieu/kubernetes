@@ -97,6 +97,7 @@ Use the output from __kubeadm token create__ command in previous step from the m
 ## Verifying the cluster
 ##### Get Nodes status
 ```
+export KUBECONFIG=/etc/kubernetes/kubelet.conf
 kubectl get nodes
 ```
 ##### Get component status
