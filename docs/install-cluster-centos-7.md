@@ -107,13 +107,13 @@ kubectl get cs
 
 ## Merge kubectl config files on Windows
 ```
-scp root@172.16.10.100:/etc/kubernetes/admin.conf C:\users\hieunv\.kube\config2
-cp C:\users\hieunv\.kube\config C:\users\hieunv\.kube\config_backup
-$env:KUBECONFIG="C:\users\hieunv\.kube\config;C:\users\hieunv\.kube\config2"
-kubectl config view  --raw > C:\users\hieunv\.kube\config_tmp
-kubectl config get-clusters --kubeconfig=C:\users\hieunv\.kube\config_tmp
-Remove-Item C:\users\hieunv\.kube\config
-Move-Item C:\users\hieunv\.kube\config_tmp C:\users\hieunv\.kube\config
+scp root@172.16.10.100:/etc/kubernetes/admin.conf C:\users\iadmin\.kube\config2
+cp C:\users\iadmin\.kube\config C:\users\iadmin\.kube\config_backup
+$env:KUBECONFIG="C:\users\iadmin\.kube\config;C:\users\iadmin\.kube\config2"
+kubectl config view  --raw > C:\users\iadmin\.kube\config_tmp
+kubectl config get-clusters --kubeconfig=C:\users\iadmin\.kube\config_tmp
+Remove-Item C:\users\iadmin\.kube\config
+Move-Item C:\users\iadmin\.kube\config_tmp C:\users\iadmin\.kube\config
 kubectl config get-clusters
 ```
 
