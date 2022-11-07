@@ -67,7 +67,7 @@ systemctl enable --now kubelet
 sudo yum -y install containerd
 rm /etc/containerd/config.toml
 systemctl restart containerd
-kubeadm init --apiserver-advertise-address=172.16.16.100 --pod-network-cidr=192.168.0.0/16
+kubeadm init --apiserver-advertise-address=172.16.16.100 --pod-network-cidr=192.168.0.0/16 --upload-certs
 ```
 ##### Deploy Calico network
 ```
