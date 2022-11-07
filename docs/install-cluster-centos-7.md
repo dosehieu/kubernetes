@@ -107,7 +107,7 @@ kubectl get cs
 
 ## Merge kubectl config files on Windows
 ```
-scp root@172.16.10.100:/etc/kubernetes/admin.conf ~/.kube/config2
+scp root@172.16.10.100:/etc/kubernetes/admin.conf C:\users\hieunv\.kube\config2
 cp C:\users\hieunv\.kube\config C:\users\hieunv\.kube\config_backup
 $env:KUBECONFIG="C:\users\hieunv\.kube\config;C:\users\hieunv\.kube\config2"
 kubectl config view  --raw > C:\users\hieunv\.kube\config_tmp
