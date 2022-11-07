@@ -117,4 +117,10 @@ Move-Item C:\users\iadmin\.kube\config_tmp C:\users\iadmin\.kube\config
 kubectl config get-clusters
 ```
 
+## Restart master node after reboot
+```
+systemctl restart containerd
+systemctl restart kubelet
+```
+
 Have Fun!!
