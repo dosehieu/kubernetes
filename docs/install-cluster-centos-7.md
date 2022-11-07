@@ -105,7 +105,7 @@ kubectl get nodes
 kubectl get cs
 ```
 
-##### Merge kubectl config files on Windows
+## Merge kubectl config files on Windows
 ```
 cp C:\users\hieunv\.kube\config C:\users\hieunv\.kube\config_backup
 $env:KUBECONFIG="C:\users\hieunv\.kube\config;C:\users\hieunv\.kube\config2"
