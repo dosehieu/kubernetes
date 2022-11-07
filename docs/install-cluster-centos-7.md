@@ -105,4 +105,15 @@ kubectl get nodes
 kubectl get cs
 ```
 
+##### Merge kubectl config files on Windows
+```
+cp C:\users\hieunv\.kube\config C:\users\hieunv\.kube\config_backup
+$env:KUBECONFIG="C:\users\hieunv\.kube\config;C:\users\hieunv\.kube\config2"
+kubectl config view  --raw > C:\users\hieunv\.kube\config_tmp
+kubectl config get-clusters --kubeconfig=C:\users\hieunv\.kube\config_tmp
+Remove-Item C:\users\hieunv\.kube\config
+Move-Item C:\users\hieunv\.kube\config_tmp C:\users\hieunv\.kube\config
+kubectl config get-clusters
+```
+
 Have Fun!!
