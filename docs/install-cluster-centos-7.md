@@ -91,6 +91,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 sudo yum -y install containerd
 rm /etc/containerd/config.toml
 systemctl restart containerd
+systemctl restart kubelet
 ```
 Use the output from __kubeadm token create__ command in previous step from the master server and run here.
 
